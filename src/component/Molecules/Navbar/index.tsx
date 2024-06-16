@@ -19,7 +19,7 @@ export default function Navbar() {
           variant="light"
           onClick={() => router.push("/sign-up")}
         >
-          testing
+          Sign Up
         </Button>
         <Button
           size="md"
