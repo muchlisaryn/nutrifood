@@ -1,11 +1,13 @@
 import Navbar from "@/component/Molecules/Navbar";
+import HeroSection from "./partials/home/HeroSection";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-slate-800 h-screen">
+      <div className="relative">
         <Navbar />
       </div>
+      <HeroSection />
     </>
   );
 }

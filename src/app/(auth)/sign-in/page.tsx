@@ -1,13 +1,13 @@
 "use client";
-
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import Logo from "@/component/Molecules/Logo";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
-const signIn = () => {
+export default function signIn() {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [signIn, setSignIn] = useState({ email: "", password: "" });
@@ -21,7 +21,17 @@ const signIn = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-screen ">
+      <div className="p-8">
+        <Button
+          className="bg-slate-100 text-slate-400 hover:text-slate-500 hover:bg-slate-300"
+          onClick={() => router.push("/")}
+        >
+          <div>
+            <FaArrowLeftLong />
+          </div>
+        </Button>
+      </div>
+      <div className="flex justify-center items-center h-[70vh]">
         <div className="w-[30%] space-y-8">
           <section className="space-y-2">
             <Logo className="mb-8 text-orange-500" />
@@ -79,6 +89,4 @@ const signIn = () => {
       </div>
     </>
   );
-};
-
-export default signIn;
+}

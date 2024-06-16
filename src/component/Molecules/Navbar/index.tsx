@@ -8,7 +8,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="p-4 flex justify-between items-center">
+    <nav className="p-4 flex justify-between items-center absolute w-full">
       <Logo className="text-white " />
       <div></div>
       <div className="flex space-x-2">
